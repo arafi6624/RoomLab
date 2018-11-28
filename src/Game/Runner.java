@@ -1,6 +1,7 @@
 package Game;
 
 import People.Person;
+import Rooms.HauntedRoom;
 import Rooms.Room;
 import Rooms.WinningRoom;
 
@@ -27,9 +28,12 @@ public class Runner {
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
+		int a= (int)(Math.random()*building.length);
+		int b = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
-		 
-		 //Setup player 1 and the input scanner
+		building[a][b] = new HauntedRoom(a, b);
+
+		//Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
