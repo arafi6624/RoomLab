@@ -10,17 +10,19 @@ public class Board {
     }
 
 
+    public Room[][] getMap() {
+        return map;
+    }
+
     public void print() {
         String row = "";
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
                 row += map[i][j].toString();
             }
+            row =row + "\n";
         }
         System.out.println(row);
     }
 
-    public String difficulty(Room[][] map) {
-        print();
-    }
 }

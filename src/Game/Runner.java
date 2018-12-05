@@ -13,7 +13,7 @@ public class Runner {
 	private static boolean gameOn = true;
 
 	public static void main(String[] args) {
-		Room[][] building = new Room[5][5];
+		Room[][] building = new Room[10][10];
 
 		//Fill the building with normal rooms
 		for (int x = 0; x < building.length; x++) {
@@ -29,21 +29,25 @@ public class Runner {
 		int b = (int) (Math.random() * building.length);
 		building[x][y] = new WinningRoom(x, y);
 		building[a][b] = new HauntedRoom(a, b);
+		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
+		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "The following map will update your position throughout the game. Good luck! \n");
 
 		//Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0, 0);
 		building[0][0].enterRoom(player1);
+		Board map = new Board(building);
+		map.print();
 		Scanner in = new Scanner(System.in);
 		while (gameOn) {
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
-			if (validMove(move, player1, building)) {
+			if (validMove(move, player1, map.getMap() )) {
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 
 			} else {
 				System.out.println("Please choose a valid move.");
 			}
-
+			map.print();
 
 		}
 		in.close();

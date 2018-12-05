@@ -32,5 +32,14 @@ public class Room {
 	{
 		occupant = null;
 	}
-	
+
+	public String toString()
+	{
+		if (occupant == null){
+			return "O";
+		}
+		else{
+			return occupant.toString();
+		}
+	}
 }

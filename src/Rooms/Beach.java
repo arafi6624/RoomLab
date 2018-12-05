@@ -21,6 +21,5 @@ public class Beach extends Room{
         x.setyLoc(this.yLoc);
 
         System.out.println("This is the beach! To build a campfire type fire.");
-
     }
 }

@@ -22,4 +22,8 @@ public class HauntedRoom extends Room {
             System.out.println("This is the haunted room! The ghost killed you :( ");
             Runner.gameOff();
         }
+        public String toString()
+        {
+            return "O";
+        }
 }
