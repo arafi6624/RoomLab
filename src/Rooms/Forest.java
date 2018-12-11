@@ -3,9 +3,9 @@ package Rooms;
 import Game.Runner;
 import People.Person;
 
-public class HauntedRoom extends Room {
+public class Forest extends Room {
 
-        public HauntedRoom(int x, int y) {
+        public Forest(int x, int y) {
             super(x, y);
         }
 

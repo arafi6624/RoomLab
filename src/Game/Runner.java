@@ -2,9 +2,9 @@ package Game;
 
 import People.Person;
 import Rooms.Beach;
-import Rooms.HauntedRoom;
+import Rooms.Forest;
 import Rooms.Room;
-import Rooms.WinningRoom;
+import Rooms.River;
 
 import java.util.Scanner;
 
@@ -18,21 +18,16 @@ public class Runner {
 
 		//Fill the building with normal rooms
 		for (int x = 0; x < building.length; x++) {
-			for (int y = 0; y < building[x].length; y++) {
+			for (int y = 1; y < building[x].length; y++) {
 				building[x][y] = new Room(x, y);
 			}
 		}
 
-		//Create a random winning room.
-		int x = (int) (Math.random() * building.length);
-		int y = (int) (Math.random() * building.length);
-		int a = (int) (Math.random() * building.length);
-		int b = (int) (Math.random() * building.length);
-		int c = (int) (Math.random() * building.length);
-		int d = (int) (Math.random() * building.length);
-		building[x][y] = new WinningRoom(x, y);
-		building[a][b] = new HauntedRoom(a, b);
-		building[c][d] = new Beach(c, d);
+		for (int x = 0; x <building.length; x++){
+			building [x][0] = new Beach(x,0);
+		}
+
+
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "The following map will update your position throughout the game. Good luck! \n");
 

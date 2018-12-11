@@ -3,10 +3,11 @@ package Rooms;
 import Game.Runner;
 import People.Person;
 
-public class Beach extends Room{
+public class Temple extends Room {
 
-    public Beach(int x, int y) {
+    public Temple(int x, int y) {
         super(x, y);
+
     }
 
     /**
@@ -19,11 +20,7 @@ public class Beach extends Room{
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-
-        System.out.println("This is the beach! Do you collect all the necessary items?");
-
-        if (){
-
-        }
+        System.out.println("You found the winning room! Ten points for Gryffindor.");
+        Runner.gameOff();
     }
 }
