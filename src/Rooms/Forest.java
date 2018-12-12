@@ -20,10 +20,14 @@ public class Forest extends Room {
             x.setxLoc(this.xLoc);
             x.setyLoc(this.yLoc);
             System.out.println("This is the haunted room! The ghost killed you :( ");
-            Runner.gameOff();
         }
         public String toString()
         {
-            return "O";
+            if (occupant == null){
+                return "F";
+            }
+            else{
+                return "P";
+            }
         }
 }

@@ -2,6 +2,7 @@ package Rooms;
 
 import Game.Runner;
 import People.Person;
+import java.util.Scanner;
 
 public class Beach extends Room{
 
@@ -20,7 +21,16 @@ public class Beach extends Room{
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
 
-        System.out.println("This is the beach! Do you collect all the necessary items?");
+        System.out.println("Right now you are at the beach! Do you collect all the necessary items?");
+        Scanner input = new Scanner(System.in);
+        String response = input.nextLine().toLowerCase();
+
+        if (response.equals("yes")){
+            System.out.println("Great now type 'build' to build the campfire and survive the night!");
+        }
+        else{
+            System.out.println("Go get the necessary items from the forest first. Beware of the beast!");
+        }
         }
 
     public String toString(){

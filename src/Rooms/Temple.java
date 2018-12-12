@@ -20,7 +20,16 @@ public class Temple extends Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the winning room! Ten points for Gryffindor.");
-        Runner.gameOff();
+        System.out.println("This is the temple ");
+    }
+
+    public String toString()
+    {
+        if (occupant == null){
+            return "^";
+        }
+        else{
+            return "P";
+        }
     }
 }

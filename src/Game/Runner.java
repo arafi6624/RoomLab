@@ -1,10 +1,7 @@
 package Game;
 
 import People.Person;
-import Rooms.Beach;
-import Rooms.Forest;
-import Rooms.Room;
-import Rooms.River;
+import Rooms.*;
 
 import java.util.Scanner;
 
@@ -14,7 +11,7 @@ public class Runner {
 	private static boolean gameOn = true;
 
 	public static void main(String[] args) {
-		Room[][] building = new Room[10][10];
+		Room[][] building = new Room[10][16];
 
 		//Fill the building with normal rooms
 		for (int x = 0; x < building.length; x++) {
@@ -27,9 +24,29 @@ public class Runner {
 			building [x][0] = new Beach(x,0);
 		}
 
+		for (int x = 0; x < building.length; x++){
+			for (int y = 1; y < building[x].length; y++){
+				building [x][y]= new Forest(x,y);
+			}
+		}
+
+		for (int x = 3; x < (building.length); x++){
+			for (int y = 6; y < (building[x].length - 6); y++){
+				building [x][y]= new River(x,y);
+			}
+		}
+
+		for (int x = 6; x < (building.length - 1); x++){
+			for (int y = 12; y < (building[x].length -1); y++){
+				building [x][y] = new Temple(x, y);
+			}
+		}
+
+
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
-		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "The following map will update your position throughout the game. Good luck! \n");
+		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
+				"The character 'P' is your position, '\uD83C\uDF34' is the forest, '~' is the river, and '^' is the temple. \n");
 
 		//Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0, 0);

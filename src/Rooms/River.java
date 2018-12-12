@@ -22,8 +22,17 @@ public class River extends Room
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("You found the winning room! Ten points for Gryffindor.");
-		Runner.gameOff();
 	}
-	
+
+	public String toString()
+	{
+		if (occupant == null){
+			return "~";
+		}
+		else{
+			return "P";
+		}
+	}
+
 
 }
