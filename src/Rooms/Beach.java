@@ -21,9 +21,13 @@ public class Beach extends Room{
         x.setyLoc(this.yLoc);
 
         System.out.println("This is the beach! Do you collect all the necessary items?");
+        }
 
-        if (){
-
+    public String toString(){
+        if (occupant == null){
+        return "B";}
+        else{
+            return "P";
         }
     }
 }
