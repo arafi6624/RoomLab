@@ -42,7 +42,10 @@ public class Runner {
 			}
 		}
 
+		int beast1 = (int) Math.random() * 17;
+		int beast2 = (int) Math.random() * 11;
 
+		building [beast1][beast2] = new Beast (beast1, beast2);
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
@@ -55,7 +58,7 @@ public class Runner {
 		map.print();
 		Scanner in = new Scanner(System.in);
 		while (gameOn) {
-			System.out.println("Where would you like to move? (Choose N, S, E, W)");
+			System.out.println("What is your next move? (Choose N, S, E, W)");
 			String move = in.nextLine();
 			if (validMove(move, player1, map.getMap() )) {
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
