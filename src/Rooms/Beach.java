@@ -21,7 +21,7 @@ public class Beach extends Room{
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
 
-        System.out.println("Right now you are at the beach! Do you collect all the necessary items?");
+        System.out.println("Right now you are at the beach! Did you collect all the necessary items?");
         Scanner input = new Scanner(System.in);
         String response = input.nextLine().toLowerCase();
 
