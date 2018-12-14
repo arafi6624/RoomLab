@@ -45,7 +45,7 @@ public class Runner {
 		int beast1 = (int) Math.random() * 17;
 		int beast2 = (int) Math.random() * 11;
 
-		building [beast1][beast2] = new Beast (beast1, beast2);
+		building [beast1][beast2] = new Beast(beast1, beast2);
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
@@ -92,7 +92,7 @@ public class Runner {
 					return false;
 				}
 			case "e":
-				if (p.getyLoc() < map[p.getyLoc()].length - 1) {
+				if (p.getyLoc() < map[p.getxLoc()].length - 1) {
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
 					return true;

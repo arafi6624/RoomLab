@@ -29,7 +29,7 @@ public class Beach extends Room{
             System.out.println("Great now type 'build' to build the campfire and survive the night!");
         }
         else{
-            System.out.println("Go get the necessary items from the forest first. Beware of the beast!");
+            System.out.println("\nGo get the necessary items from the forest first. Beware of the beast!");
         }
         }
 
