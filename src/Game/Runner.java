@@ -1,3 +1,5 @@
+/* Text Based Adventure Project by Abdul Rafi */
+
 package Game;
 
 import People.Person;
@@ -49,7 +51,7 @@ public class Runner {
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
-				"The character 'P' is your position, '\uD83C\uDF34' is the forest, '~' is the river, and '^' is the temple. \n");
+				"The character 'P' is your position, '\uD83C\uDF34' is the forest, '~' is the river (becareful you cannot swim), and '^' is the temple. \n");
 
 		//Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0, 0);

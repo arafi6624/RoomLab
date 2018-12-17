@@ -19,7 +19,7 @@ public class Forest extends Room {
             occupant = x;
             x.setxLoc(this.xLoc);
             x.setyLoc(this.yLoc);
-            System.out.println("This is the forest. Continue ");
+            System.out.println("This is the forest. Continue looking for the items if you haven't found them.");
         }
         public String toString()
         {
