@@ -44,10 +44,14 @@ public class Runner {
 			}
 		}
 
-		int beast1 = (int) Math.random() * 17;
-		int beast2 = (int) Math.random() * 11;
+		int a = (int) (Math.random()* building.length);
+		int b = (int) (Math.random()* building.length);
 
-		building [beast1][beast2] = new Beast(beast1, beast2);
+		if (b > 5 && b < 10){
+			b = b + 3;
+		}
+
+		building [a][b] = new Beast(a, b);
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
