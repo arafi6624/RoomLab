@@ -7,6 +7,7 @@ public class Person {
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;
+	int[] inventory;
 
 
 	public int getxLoc() {

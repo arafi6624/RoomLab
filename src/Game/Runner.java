@@ -2,9 +2,9 @@
 
 package Game;
 
+import Items.Fire;
 import People.Person;
 import Rooms.*;
-import com.sun.tools.javac.jvm.Items;
 
 import java.util.Scanner;
 
@@ -55,6 +55,7 @@ public class Runner {
 		}
 
 		building [a][b] = new Beast(a, b);
+		building [c][d] = new ForestSpecial(c,d);
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +
