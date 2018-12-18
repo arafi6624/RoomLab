@@ -4,6 +4,7 @@ package Game;
 
 import People.Person;
 import Rooms.*;
+import com.sun.tools.javac.jvm.Items;
 
 import java.util.Scanner;
 
@@ -46,6 +47,8 @@ public class Runner {
 
 		int a = (int) (Math.random()* building.length);
 		int b = (int) (Math.random()* building.length);
+		int c = (int) (Math.random()* building.length);
+		int d = (int) (Math.random()* building.length);
 
 		if (b > 5 && b < 10){
 			b = b + 3;
