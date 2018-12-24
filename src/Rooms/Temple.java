@@ -26,10 +26,10 @@ public class Temple extends Room {
     public String toString()
     {
         if (occupant == null){
-            return "^";
+            return "\uD83C\uDFEF";
         }
         else{
-            return "P";
+            return "\uD83D\uDEB6";
         }
     }
 }

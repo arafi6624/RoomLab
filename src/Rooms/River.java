@@ -33,7 +33,7 @@ public class River extends Room
 			return "~";
 		}
 		else{
-			return "P";
+			return "\uD83D\uDEB6";
 		}
 	}
 

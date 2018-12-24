@@ -7,7 +7,6 @@ public class Person {
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;
-	int[] inventory;
 
 
 	public int getxLoc() {
@@ -26,10 +25,6 @@ public class Person {
 		this.yLoc = yLoc;
 	}
 
-	public int[] getInventory() {
-		return inventory;
-	}
-
 	public Person (String firstName, String familyName, int xLoc, int yLoc)
 	{
 		this.firstName = firstName;
@@ -40,7 +35,7 @@ public class Person {
 
 	public String toString()
 	{
-		return "P";
+		return "\uD83D\uDEB6";
 	}
 
 }

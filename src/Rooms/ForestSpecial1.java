@@ -5,9 +5,9 @@ import People.Person;
 
 import java.util.Scanner;
 
-public class ForestSpecial extends Room {
+public class ForestSpecial1 extends Room {
 
-    public ForestSpecial(int x, int y) {
+    public ForestSpecial1(int x, int y) {
         super(x, y);
     }
 
@@ -21,7 +21,7 @@ public class ForestSpecial extends Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the fire! Type 'keep' to place it in your inventory.");
+        System.out.println("You found the Sticks! Type 'keep' to place it in your inventory.");
         Scanner input = new Scanner(System.in);
         String response = input.nextLine().toLowerCase();
         if (response.equals("keep")){
@@ -31,6 +31,7 @@ public class ForestSpecial extends Room {
             System.out.println("Are you sure you don't want to keep it?");
         }
     }
+
     public String toString()
     {
         if (occupant == null){

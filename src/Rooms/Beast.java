@@ -28,7 +28,7 @@ public class Beast extends Room{
     @Override
     public String toString() {
         if (yLoc > 1){
-            return "F";
+            return "\uD83C\uDF34";
         }
         else{
             return "B";

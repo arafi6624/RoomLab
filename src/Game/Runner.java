@@ -49,13 +49,32 @@ public class Runner {
 		int b = (int) (Math.random()* building.length);
 		int c = (int) (Math.random()* building.length);
 		int d = (int) (Math.random()* building.length);
+		int e = (int) (Math.random()* building.length);
+		int f = (int) (Math.random()* building.length);
+		int g = (int) (Math.random()* building.length);
+		int h = (int) (Math.random()* building.length);
 
 		if (b > 5 && b < 10){
 			b = b + 3;
 		}
 
+		if (d > 5 && d < 10){
+			d = d + 3;
+		}
+
+		if (f > 5 && f < 10){
+			f = f + 3;
+		}
+
+		if (h > 5 && h < 10){
+			h = h + 3;
+		}
+
+
 		building [a][b] = new Beast(a, b);
 		building [c][d] = new ForestSpecial(c,d);
+		building [e][f] = new ForestSpecial1(e,f);
+		building [g][h] = new ForestSpecial2(g,h);
 
 		System.out.println("Welcome to Survival Island! \n" + "In this game you will be searching through the island to find many items that can help you make a campfire at the beach to survive the night. \n"+
 		"Beware of the beasts in the forest! \n" + "Make the campfire to win the game \n" + "A map will update your position throughout the game.\n" +

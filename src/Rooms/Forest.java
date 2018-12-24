@@ -24,10 +24,10 @@ public class Forest extends Room {
         public String toString()
         {
             if (occupant == null){
-                return "F";
+                return "\uD83C\uDF34";
             }
             else{
-                return "P";
+                return "\uD83D\uDEB6";
             }
         }
 }
